@@ -1,6 +1,6 @@
 # JWT-Auth
 
-This toy project uses provides implementation of JWT using java in backend API and AngularJS in frontend
+This toy project provides implementation of JWT using java in backend API and AngularJS in frontend
 
 It displays how to do authentication and authorization using JWT access tokens.
 It also demonstrates, how to maintain session and do revokation of JWT tokens. 
