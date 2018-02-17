@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="Authentication">
+
+<head>
+  <base href="/auth/">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta charset="utf-8" />
+
+  <title>Authentication</title>
+
+  <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;" ng-cloak>
+
+  <!-- TOOLBAR -->
+  <md-toolbar ng-controller="LoginController as login">
+    <div class="md-toolbar-tools">
+      <h1> <a href="home" > Authentication Demo </a> </h1>
+      <span flex></span>
+      <md-button ng-click="login.redirectToLoginPage()" ng-show="!login.loginService.isAuthenticated()" class="md-raised" aria-label="Login" > Login </md-button>
+      <md-button ng-click="login.redirectToSignUpPage()" ng-show="!login.loginService.isAuthenticated()" class="md-raised" aria-label="Sign Up" > Sign Up </md-button>
+      <md-button ng-click="login.logout()" ng-show="login.loginService.isAuthenticated()" class="md-raised" aria-label="Logout"> Logout </md-button>
+    </div>
+  </md-toolbar>
+
+  <!-- ACTUAL PAGE WILL GO HERE -->
+  <div ng-view> </div>
+
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-aria/angular-aria.js"></script>
+  <script src="node_modules/angular-animate/angular-animate.js"></script>
+  <script src="node_modules/angular-material/angular-material.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/logincontroller.js"></script>
+  <script src="js/services.js"></script>
+
+</body>
+
+</html>

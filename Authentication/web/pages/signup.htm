@@ -1,0 +1,39 @@
+<md-content style="text-align:center;" layout-padding layout="row" layout-align="center center" ng-controller="LoginController as login">
+  <md-whiteframe class="md-whiteframe-1dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+
+    <form name="LoginForm" ng-submit="login.signUp();" novalidate>
+      <table>
+        <tr>
+          <td>
+            <md-input-container>
+              <label>Username</label>
+              <input md-no-asterisk type="text" name="username" ng-model="login.username" />
+            </md-input-container>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <md-input-container>
+              <label>Password</label>
+              <input md-no-asterisk type="password" name="password" ng-model="login.password" />
+            </md-input-container>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="text-align:center;">
+            <md-button aria-label="Sign Up" class="md-raised" type="submit"> Sign Up </md-button>
+          </td>
+        </tr>
+
+        <tr>
+            <td style="text-align:center;">
+              <p ng-show="login.signUpMessage">{{login.signUpMessage}}</p>
+            </td>
+        </tr>
+
+      </table>
+    </form>
+  </md-whiteframe>
+</md-content>

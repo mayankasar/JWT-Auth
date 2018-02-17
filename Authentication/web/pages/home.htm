@@ -1,0 +1,11 @@
+<md-content style="text-align:center" layout-padding ng-controller="LoginController as login">
+  <center>
+    <h1> Home page</h1>
+    <md-button ng-click="login.onPingClick()" aria-label="Ping" class="md-raised"> Ping Backend </md-button>
+    <md-button ng-click="login.refreshToken()" aria-label="Refresh Token" class="md-raised"> Refresh Token </md-button>
+    <md-button ng-click="login.viewAccessToken()" aria-label="View Token" class="md-raised"> View Token </md-button>
+    <div style="border:1px solid black; padding:15px; width:40%; font-size:14px;" >
+      <p ng-bind-html='login.apiResponse' />
+    </div>
+  </center>
+</md-content>
